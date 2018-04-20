@@ -2,7 +2,7 @@
 
 ### Tools used
 > Packer
-Used for generating Amazon Machine Images that are configured with the application services
+Used for generating Amazon Machine Images that are configured with the application services \
 Currently completed:
 - Frontend service
 - Catalogue service
@@ -13,7 +13,7 @@ Pending:
 - Payments service
 
 > Terraform
-Used to provision the infrastructure for serving the application
+Used to provision the infrastructure for serving the application \
 Currently completed:
 - Frontend instance
 - Catalague instance
