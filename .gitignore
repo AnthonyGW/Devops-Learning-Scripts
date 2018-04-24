@@ -1,2 +1,5 @@
 .DS_Store
 secrets.tfvars
+*.tfstate*
+help/
+outputs/
