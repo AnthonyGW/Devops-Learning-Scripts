@@ -37,13 +37,14 @@ function clone_catalogue_repository {
 function build_catalogue_service {
   echo "Building catalogue service..."
   cd ~/catalogue
-  sudo docker-compose build &
+  sudo docker-compose build
+
 }
 
 function start_catalogue_service {
   echo "Starting catalogue service..."
   cd ~/catalogue
-  sudo docker-compose up &
+  sudo docker-compose up -d
 }
 
 main(){
