@@ -22,11 +22,12 @@ Used to provision the infrastructure for serving the application \
 Currently completed:
 - Frontend instance
 - Catalague instance
-
-Pending:
 - Application Load Balancer, Targets and Listener
 - VPC network
+
+Pending:
 - Elastic IP
+- Custom load balancing instance
 
 ### Setting up
 Include access keys with var files: \
@@ -35,9 +36,7 @@ Include access keys with var files: \
 
 The format is the same as on the sample var files in the folders. \
 
-Also, for now export the following environment variables before running any terraform scripts: \
-`TF_VAR_ami_frontend="MOST_RECENT_AMI_ID_FROM_GENERATED_FRONTEND_MANIFEST_FILE"`
-`TF_VAR_ami_catalogue="MOST_RECENT_AMI_ID_FROM_GENERATED_CATALOGUE_MANIFEST_FILE"`
+The AMI IDs are now automatically picked from the manifest files and exported into Terraform format environment variables \
 
 ### Entry point
 Execute `scripts/run.sh` to begin validating Packer templates followed by building the images with the repository root directory.
