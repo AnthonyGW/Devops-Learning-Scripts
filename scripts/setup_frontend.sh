@@ -41,7 +41,7 @@ function build_frontend {
 
 function start_frontend {
   echo "Starting front-end service as frontapp..."
-  sudo docker run -p 8079:8079 --name frontapp frontend:latest &
+  sudo docker run -p 8079:8079 --restart unless-stopped --name frontapp frontend:latest &
 }
 
 main(){
