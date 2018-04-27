@@ -1,3 +1,5 @@
+aws_keyname = "YOUR_AWS_KEY_ROLE"
+
 aws_access_key = "YOUR_AWS_ACCESS_KEY_ID"
 
 aws_secret_key = "YOUR_AWS_SECRET_KEY"

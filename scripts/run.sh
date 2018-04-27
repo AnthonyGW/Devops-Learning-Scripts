@@ -19,6 +19,9 @@ function build_ami_with_packer {
   packer build  -var-file="./packer/variables.json" ./packer/catalogue.json
   export TF_VAR_ami_catalogue=$(jq '.builds | .[-1].artifact_id' ./packer/outputs/catalogue-manifest.json | sed -e 's/us-east-1://g')
 
+  # build amazon machine image for nginx load balancer
+  packer build -var-file=$PACKER_VAR ./packer/loadbalancer.json
+  export TF_VAR_ami_loadbalancer=$(jq '.builds | .[-1].artifact_id' ./packer/outputs/loadbalancer-manifest.json | sed -e 's/us-east-1://g')
 }
 
 validate_packer_images
